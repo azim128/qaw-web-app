@@ -1,15 +1,12 @@
 import React from 'react'
 import { AiOutlineGlobal, AiTwotoneBug, AiTwotoneThunderbolt } from 'react-icons/ai'
+import SectionHead from '../sectionheader/SectionHead'
 import './service.css'
 const ServiceModule = () => {
   return (
     <section id="services" class="services sections-bg">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Our Services</h2>
-          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
-        </div>
+        <SectionHead title='Our Services' subtitle='Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop'/>
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 

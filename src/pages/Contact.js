@@ -1,11 +1,11 @@
 import React from 'react'
-import { Hero } from '../components/hero/Hero'
 import Newsletter from '../components/newsletter/Newsletter'
 import Contact2 from '../components/contact/Contact'
+import Banner from '../components/banner/Banner'
 
 const Contact = () => {
   return (
-    <><Hero/>
+    <><Banner/>
     <Contact2/>
     <Newsletter/></>
   )

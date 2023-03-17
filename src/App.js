@@ -3,7 +3,6 @@ import SingleBlog from "./components/blog/SingleBlog";
 import Footer from "./components/footer/Footer";
 import Nav from "./components/Nav/Nav";
 import SinglePortfolio from "./components/portfolio/SinglePortfolio";
-import ServiceModule from "./components/services/ServiceModule";
 import Ai from "./components/services/servicepage/Ai";
 import AppDev from "./components/services/servicepage/AppDev";
 import Iot from "./components/services/servicepage/Iot";
@@ -13,6 +12,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Protfolio from "./pages/Protfolio";
+import Service from "./pages/Service";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route element={<Contact />} path="/contact" />
         <Route element={<Blog />} path="/blog" />
         <Route element={<SingleBlog />} path="/blog/:id" />
-        <Route element={<ServiceModule />} path="/services" />
+        <Route element={<Service/>} path="/services" />
         <Route element={<WebDev />} path="/web" />
         <Route element={<AppDev />} path="/app" />
         <Route element={<Iot />} path="/iot" />
