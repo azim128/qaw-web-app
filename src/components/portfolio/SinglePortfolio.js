@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { Hero } from '../hero/Hero';
+import Banner from '../banner/Banner';
 import portfolioData from '../portfolio/portfolio';
 import './portfolio.css'
 const SinglePortfolio = () => {
@@ -15,7 +15,7 @@ const SinglePortfolio = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <><Hero/>
+    <><Banner/>
     <div className='go-back py-3 text-center'>
     <Link className='blog-goBack' to='/'>
     <span> &#8592;</span> <span>Go Back</span>
