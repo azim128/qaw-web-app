@@ -5,6 +5,7 @@ import FaqModule from '../components/faq/FaqModule'
 import { Hero } from '../components/hero/Hero'
 import Newsletter from '../components/newsletter/Newsletter'
 import PortfolioModule from '../components/portfolio/PortfolioModule'
+import ServiceModule from '../components/services/ServiceModule'
 import WhyUs from '../components/whyus/WhyUs'
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     <><Hero/> 
     <About/>
     <WhyUs/>
+    <ServiceModule/>
     <FaqModule/>
     <PortfolioModule/>
     <Contact/>

@@ -1,16 +1,14 @@
 import React from 'react'
 import {FaCogs, FaMicrochip, FaReact, FaSnowflake} from 'react-icons/fa'
+import SectionHead from '../sectionheader/SectionHead'
 
 import './whyus.css'
 const WhyUs = () => {
   return (
     <section id="services" className="services section-bg">
       <div className="container" data-aos="fade-up">
-
-        <div className="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+        <SectionHead title=" Why Us" subtitle ='Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.'/>
+        
 
         <div className="row">
           <div className="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
