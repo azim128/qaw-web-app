@@ -7,39 +7,39 @@ const WhyUs = () => {
   return (
     <section id="services" className="services section-bg">
       <div className="container" data-aos="fade-up">
-        <SectionHead title=" Why Us" subtitle ='Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.'/>
+        <SectionHead title=" Why Us" subtitle ='We believe in fostering long-term partnerships with our clients, built on a foundation of trust and transparency.'/>
         
 
         <div className="row">
           <div className="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div className="icon-box">
               <div className="icon"><i> <FaCogs/> </i></div>
-              <h4><a className='text-decoration-none' href="33">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h5>Experienced Team</h5>
+              <p>Our experienced team has a proven track record of delivering high-quality projects that are tailored to our clients' specific needs and grounded in our extensive knowledge of various industries.</p>
             </div>
           </div>
 
           <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div className="icon-box">
               <div className="icon"><i > <FaReact/> </i></div>
-              <h4><a className='text-decoration-none' href="ee">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h5>Customer Satisfaction</h5>
+              <p>Our company prioritizes customer satisfaction and values clear communication and partnership with our clients to deliver solutions that exceed their expectations and build long-term relationships based on trust and mutual benefit.</p>
             </div>
           </div>
 
           <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div className="icon-box">
               <div className="icon"><i ><FaMicrochip/></i></div>
-              <h4><a className='text-decoration-none' href="ee">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h5>Cutting Edge Solution</h5>
+              <p>We deliver cutting-edge solutions through our commitment to innovation, technology expertise, and exploring new technologies and techniques.</p>
             </div>
           </div>
 
           <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div className="icon-box">
               <div className="icon"><i><FaSnowflake/></i></div>
-              <h4><a className='text-decoration-none' href="ee">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h5>Flexibility and Agility</h5>
+              <p>Our company is flexible, agile, and scalable, adapting to each project's unique needs and delivering high-quality results quickly and efficiently.</p>
             </div>
           </div>
 

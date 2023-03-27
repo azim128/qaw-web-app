@@ -1,11 +1,12 @@
 import React from 'react'
 import Banner from '../../banner/Banner'
-
+import ServiceModule from '../ServiceModule'
+import {AiSolution} from '../Services';
 const Ai = () => {
   return (
     <>
-    <Banner/>
-    <h1>AI Solutions</h1>
+    <Banner title='Machine Learning (ML) & Artificial Intelligence (AI)' subtitle='Get a top-notch Machine Learning and Artificial Intelligence solution for your organization from our team of skilled professionals.' btntext='Contact Us'/>
+    <ServiceModule Service={AiSolution}/>
     </>
   )
 }

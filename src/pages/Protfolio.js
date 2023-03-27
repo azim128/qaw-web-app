@@ -5,7 +5,7 @@ import PortfolioModule from '../components/portfolio/PortfolioModule'
 const Protfolio = () => {
   return (
     <div>
-        <Banner/>
+        <Banner title='Featured Work' subtitle='Our expertise in custom-based software applications and technologies has allowed us to create innovative solutions for a variety of industries, from healthcare to finance'/>
         <PortfolioModule/>
     </div>
   )

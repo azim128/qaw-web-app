@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container" data-aos="fade-up">
 
-        <SectionHead title="Contact" subtitle="Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit."/>
+        <SectionHead title="Contact" subtitle="Want to discuss With US"/>
 
         <div className="row">
 

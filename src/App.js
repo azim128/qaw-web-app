@@ -1,10 +1,10 @@
-import Preloder from "./components/preloader/Preloder";
+import Routing from "./components/routing/Routing";
 
 
 function App() {
   return (
     <div className="App">
-     <Preloder/> 
+     <Routing/>
     </div>
   );
 }

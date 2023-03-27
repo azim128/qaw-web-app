@@ -5,7 +5,7 @@ import BlogSection from '../components/blog/BlogSection'
 const Blog = () => {
   return (
     <>
-    <Banner/>
+    <Banner title='Blog'/>
     <BlogSection/>
     </>
     

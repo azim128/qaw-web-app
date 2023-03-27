@@ -5,7 +5,7 @@ import Banner from '../components/banner/Banner'
 
 const Contact = () => {
   return (
-    <><Banner/>
+    <><Banner title='Contact US' subtitle='Let’s Bring Your Creative Ideas to Life'/>
     <Contact2/>
     <Newsletter/></>
   )
