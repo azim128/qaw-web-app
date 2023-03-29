@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import SectionHead from '../sectionheader/SectionHead'
 import './contact.css'
 const Contact = () => {
+  const navigate = useNavigate();
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    try {
+      const result = await emailjs.sendForm('service_sy07aji', 'template_zzivvrp', form.current, '0MYAfxoWZqL0-QjnP');
+      console.log(result.text);
+      navigate('/my-route');
+    } catch (error) {
+      console.log(error.text);
+    }
+  };
   return (
     <section id="contact" className="contact">
       <div className="container" data-aos="fade-up">
@@ -38,7 +54,7 @@ const Contact = () => {
           </div>
 
           <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form className="main-email-form">
+            <form ref={form} onSubmit={sendEmail} className="main-email-form">
               <div className="row">
                 <div className="form-group col-md-6">
                   <label htmlFor="name">Your Name</label>

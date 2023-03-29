@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import {BiMenuAltLeft} from 'react-icons/bi'
+import {BiMenuAltLeft, BiX} from 'react-icons/bi'
 import { Link } from 'react-router-dom';
 
 import './nav.css'
 const Nav = () => {
   const [className, setClassName] = useState('fixed-top');
+  const [isActive, setIsActive] = useState(false);
   const toggleMobileNav = () => {
-    const navbar = document.querySelector('#navbar')
-    navbar.classList.toggle('navbar-mobile')
+    setIsActive(!isActive);
   }
   useEffect(() => {
     const handleScroll = () => {
@@ -30,11 +30,11 @@ const Nav = () => {
     <header id="header" className={className}>
     <div className="container d-flex align-items-center">
 
-      <h1 className="logo me-auto"><Link to='/' className='text-decoration-none'>Need Name</Link></h1>
+      <h1 className="logo me-auto"><Link to='/' className='text-decoration-none'>QAW IT</Link></h1>
       {/* <!-- Uncomment below if you prefer to use an image logo --> */}
       {/* <!-- <a href="index.html" className="logo me-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>--> */}
 
-      <nav id="navbar" className="navbar">
+      <nav id="navbar"  className={`navbar ${isActive ? 'navbar-mobile' : ''}`} >
         <ul>
           <li><Link className="nav-link scrollto active" to='/'>Home</Link></li>
           <li><Link className="nav-link scrollto" to="about">About</Link></li>
@@ -61,10 +61,11 @@ const Nav = () => {
           </li>
 
 
-          <li><Link className="getstarted scrollto text-decoration-none" to='/contact'>Contact</Link></li>
+          <li><Link className="getstarted scrollto text-center text-decoration-none" to='/contact'>Contact</Link></li>
           
         </ul>
-        <i className="bi bi-list mobile-nav-toggle" onClick={toggleMobileNav}> <BiMenuAltLeft/> </i>
+        <i className="bi bi-list mobile-nav-toggle" onClick={toggleMobileNav}>{isActive ? (<BiX/>):(<BiMenuAltLeft/>)}</i>
+
       </nav>
 
     </div>

@@ -18,7 +18,7 @@ const SingleBlog = () => {
   }, []);
   return (
     <>
-      <Banner />
+      <Banner title={blog?.category}/>
       <div className="go-back py-3 text-center">
         <Link className="blog-goBack" to="/blog">
           <span> &#8592;</span> <span>Go Back</span>

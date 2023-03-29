@@ -66,7 +66,7 @@ const Footer = () => {
         &copy; Copyright <strong><span>QAW</span></strong>. All Rights Reserved
       </div>
       <div className="credits">
-        Designed by <Link to="/about">QAW</Link>
+        Designed by <Link to="/about">QAW IT</Link>
       </div>
     </div>
   </footer>

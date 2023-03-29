@@ -15,7 +15,7 @@ const SinglePortfolio = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <><Banner/>
+    <><Banner title={protfolio?.catagory}/>
     <div className='go-back py-3 text-center'>
     <Link className='blog-goBack' to='/'>
     <span> &#8592;</span> <span>Go Back</span>

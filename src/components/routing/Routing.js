@@ -19,18 +19,18 @@ const Routing = () => {
     <>
     <Nav />
       <Routes>
-        <Route element={<Home />} path="/*" />
-        <Route element={<About />} path="/about" />
-        <Route element={<Contact />} path="/contact" />
-        <Route element={<Blog />} path="/blog" />
-        <Route element={<SingleBlog />} path="/blog/:id" />
+        <Route element={<Home/>} path="/*" />
+        <Route element={<About/>} path="/about" />
+        <Route element={<Contact/>} path="/contact" />
+        <Route element={<Blog/>} path="/blog" />
+        <Route element={<SingleBlog/>} path="/blog/:id" />
         <Route element={<Service/>} path="/services" />
-        <Route element={<WebDev />} path="/web" />
-        <Route element={<AppDev />} path="/app" />
-        <Route element={<Iot />} path="/iot" />
-        <Route element={<Ai />} path="/ai" />
-        <Route element={<Protfolio />} path="/portfolio" />
-        <Route element={<SinglePortfolio />} path="/portfolio/:id" />
+        <Route element={<WebDev/>} path="/web" />
+        <Route element={<AppDev/>} path="/app" />
+        <Route element={<Iot/>} path="/iot" />
+        <Route element={<Ai/>} path="/ai" />
+        <Route element={<Protfolio/>} path="/portfolio" />
+        <Route element={<SinglePortfolio/>} path="/portfolio/:id" />
       </Routes>
       <Footer />
     </>
