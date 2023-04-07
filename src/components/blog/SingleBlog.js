@@ -1,30 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from 'react-router';
 import { Link } from "react-router-dom";
 import Banner from "../banner/Banner";
-import blogList from "./AllBlog";
-import img1 from '../assets/why-us.png'
+import { useQuery } from 'react-query';
+import { getSingleBlog } from '../../api/Api';
 import './blog.css'
 
 const SingleBlog = () => {
   const { id } = useParams();
-  const [blog, setBlog] = useState(null);
-  useEffect(() => {
-    let blog = blogList.find((blog) => blog.id === parseInt(id));
-    if (blog) {
-      setBlog(blog);
-    }
-    // eslint-disable-next-line
-  }, []);
-  return (
-    <>
-      <Banner title={blog?.category}/>
-      <div className="go-back py-3 text-center">
-        <Link className="blog-goBack" to="/blog">
-          <span> &#8592;</span> <span>Go Back</span>
-        </Link>
-      </div>
-      {blog?(<section id="blog" className="blog">
+  
+    const { isLoading, isError, error, data: blog } = useQuery(
+      "blog",
+      () => getSingleBlog(id)
+    );
+    console.log(blog);
+    let content;
+    if (isLoading) {
+      content = <p>Loading...</p>;
+    } else if (isError) {
+      content = <p>{error.message}</p>;
+    } else {
+      content =blog?(<section id="blog" className="blog">
       <div className="container" data-aos="fade-up">
 
         <div className="row g-5">
@@ -33,8 +28,8 @@ const SingleBlog = () => {
 
             <article className="blog-details">
 
-              <div className="post-img">
-                <img src={img1} alt="" className="img-fluid"/>
+              <div className="single-post-img d-flex justify-content-center">
+                <img src={`${process.env.REACT_APP_APIURL}${blog.image}`} alt="" className="img-fluid mx-auto"/>
               </div>
 
               <h2 className="title">{blog.title}</h2>
@@ -69,7 +64,7 @@ const SingleBlog = () => {
 
                 <blockquote>
                   <p>
-                  {blog.subtitle}
+                  {blog.sub_title}
                   </p>
                 </blockquote>
 
@@ -91,7 +86,18 @@ const SingleBlog = () => {
           </div>
         </div>
       </div>
-    </section>):(<div></div>)}
+    </section>):(<div></div>)
+    }
+  return (
+    <>
+      <Banner title={blog?.catagory?.name}/>
+      <div className="go-back py-3 text-center">
+        <Link className="blog-goBack" to="/blog">
+          <span> &#8592;</span> <span>Go Back</span>
+        </Link>
+        <p className='text-white'>{blog?.catagory?.name}</p>
+      </div>
+      {content}
     </>
   );
 };

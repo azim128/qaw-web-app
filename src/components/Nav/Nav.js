@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {BiMenuAltLeft, BiX} from 'react-icons/bi'
 import { Link } from 'react-router-dom';
-
+import LOGO from '../assets/QAWIT.png'
 import './nav.css'
 const Nav = () => {
   const [className, setClassName] = useState('fixed-top');
@@ -30,9 +30,7 @@ const Nav = () => {
     <header id="header" className={className}>
     <div className="container d-flex align-items-center">
 
-      <h1 className="logo me-auto"><Link to='/' className='text-decoration-none'>QAW IT</Link></h1>
-      {/* <!-- Uncomment below if you prefer to use an image logo --> */}
-      {/* <!-- <a href="index.html" className="logo me-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>--> */}
+      <Link to='/' className="logo me-auto"><img src={LOGO} alt="" className="img-fluid" /></Link>
 
       <nav id="navbar"  className={`navbar ${isActive ? 'navbar-mobile' : ''}`} >
         <ul>
@@ -64,7 +62,7 @@ const Nav = () => {
           <li><Link className="getstarted scrollto text-center text-decoration-none" to='/contact'>Contact</Link></li>
           
         </ul>
-        <i className="bi bi-list mobile-nav-toggle" onClick={toggleMobileNav}>{isActive ? (<BiX/>):(<BiMenuAltLeft/>)}</i>
+        <i className="mobile-nav-toggle" onClick={toggleMobileNav}>{isActive ? (<BiX/>):(<BiMenuAltLeft/>)}</i>
 
       </nav>
 
@@ -73,4 +71,5 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Nav;
+

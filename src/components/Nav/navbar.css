@@ -1,0 +1,33 @@
+.nav-link {
+  font-size: 17px;
+  color: #fff !important;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+
+.nav-link:hover {
+  color: #47b2e4 !important;
+}
+
+ul.dropdown-menu.show {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-toggler {
+  background-color: #fff !important;
+}
+
+.custom-btn {
+  border-radius: 15px;
+  color: #fff;
+  border: 2px solid #31a9e1;
+  background: #47b2e4;
+  margin-left: 5px;
+}
+.custom-btn:hover {
+  background: #31a9e1;
+  color: #fff !important;
+  border: 2px solid #31a9e1;
+}

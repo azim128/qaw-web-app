@@ -4,8 +4,7 @@
   padding: 15px 0;
 }
 
-#header.header-scrolled,
-#header.header-inner-pages {
+#header.header-scrolled {
   background: rgba(40, 58, 90, 1);
 }
 #header .logo {
@@ -23,7 +22,7 @@
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 80px;
 }
 .navbar {
   padding: 0;
@@ -164,9 +163,7 @@
   transition: 0.5s;
 }
 
-.mobile-nav-toggle.bi-x {
-  color: #fff;
-}
+
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {

@@ -1,24 +1,29 @@
-import React, { useRef } from 'react'
-import { useNavigate } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react'
 import SectionHead from '../sectionheader/SectionHead'
 import './contact.css'
+import { addContact } from '../../api/Api';
+import { useMutation } from 'react-query';
 const Contact = () => {
-  const navigate = useNavigate();
-  const form = useRef();
-
+ const [uname,setUname] = useState('');
+ const [email,setEmail] = useState('');
+ const [subject,setSubject] = useState('');
+ const [message,setMessage] = useState('');
+ const addTodoMutation = useMutation(addContact, {
+  onSuccess: () => {
+  }
+})
   const sendEmail = async (e) => {
     e.preventDefault();
+    addTodoMutation.mutate({ email:email, name:uname,subject:subject,message:message})
+    setUname('')
+    setEmail('')
+    setSubject('')
+    setMessage('')
 
-    try {
-      const result = await emailjs.sendForm('service_sy07aji', 'template_zzivvrp', form.current, '0MYAfxoWZqL0-QjnP');
-      console.log(result.text);
-      navigate('/my-route');
-    } catch (error) {
-      console.log(error.text);
-    }
+    
   };
   return (
+    
     <section id="contact" className="contact">
       <div className="container" data-aos="fade-up">
 
@@ -54,24 +59,30 @@ const Contact = () => {
           </div>
 
           <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form ref={form} onSubmit={sendEmail} className="main-email-form">
+            
+            <form  onSubmit={sendEmail} className="main-email-form">
               <div className="row">
                 <div className="form-group col-md-6">
                   <label htmlFor="name">Your Name</label>
-                  <input type="text" name="name" className="form-control" id="name" required/>
+                  <input type="text" name="name" value={uname}
+                  onChange={(e) => setUname(e.target.value)}
+                  placeholder="Enter your name" className="form-control" id="name" required/>
                 </div>
                 <div className="form-group col-md-6">
                   <label htmlFor="name">Your Email</label>
-                  <input type="email" className="form-control" name="email" id="email" required/>
+                  <input type="email" className="form-control" name="email" id="email" value={email}
+                  onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
               </div>
               <div className="form-group">
                 <label htmlFor="name">Subject</label>
-                <input type="text" className="form-control" name="subject" id="subject" required/>
+                <input type="text" className="form-control" name="subject" id="subject" value={subject}
+                  onChange={(e) => setSubject(e.target.value)} required/>
               </div>
               <div className="form-group">
                 <label htmlFor="name">Message</label>
-                <textarea className="form-control" name="message" rows="10" required></textarea>
+                <textarea className="form-control" name="message" rows="10" value={message}
+                  onChange={(e) => setMessage(e.target.value)} required></textarea>
               </div>
               <div className="my-3">
                 <div className="loading">Loading</div>

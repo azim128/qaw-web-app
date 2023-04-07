@@ -7,17 +7,17 @@ import Protfolio from "../../pages/Protfolio";
 import Service from "../../pages/Service";
 import SingleBlog from "../blog/SingleBlog";
 import Footer from "../footer/Footer";
-import Nav from "../Nav/Nav";
+// import Nav from "../Nav/Nav";
 import SinglePortfolio from "../portfolio/SinglePortfolio";
 import Ai from "../services/servicepage/Ai";
 import AppDev from "../services/servicepage/AppDev";
 import Iot from "../services/servicepage/Iot";
 import WebDev from "../services/servicepage/WebDev";
-
+import NavBar from "../Nav/NavBar";
 const Routing = () => {
   return (
     <>
-    <Nav />
+    <NavBar />
       <Routes>
         <Route element={<Home/>} path="/*" />
         <Route element={<About/>} path="/about" />
